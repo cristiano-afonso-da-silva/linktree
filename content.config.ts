@@ -49,6 +49,24 @@ export const CONTENT = {
     // To add more links, copy the format above and update name, url, and icon
   ],
 
+  // Productivity System Button
+  productivitySystem: {
+    // Button text
+    text: "My Productivity System",
+    
+    // Button link (must include https://)
+    url: "https://cristianosystem.gumroad.com/",
+  },
+
+  // Resume Template Button
+  resumeTemplate: {
+    // Button text
+    text: "2025-2026 Ultimate Resume Template",
+    
+    // Button link (must include https://)
+    url: "https://cristianosystem.gumroad.com/l/2025-2026UltimateResumeTemplate",
+  },
+
   // Featured Project
   featuredProject: {
     // Project title

@@ -72,6 +72,26 @@ export default function Home() {
         ))}
       </div>
 
+      {/* Productivity System Button */}
+      <a
+        href={CONTENT.productivitySystem.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="productivity-button"
+      >
+        {CONTENT.productivitySystem.text}
+      </a>
+
+      {/* Resume Template Button */}
+      <a
+        href={CONTENT.resumeTemplate.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="resume-button"
+      >
+        {CONTENT.resumeTemplate.text}
+      </a>
+
       {/* Featured Project Card */}
       <div className="project-card">
         <h2 className="project-title">{CONTENT.featuredProject.title}</h2>
