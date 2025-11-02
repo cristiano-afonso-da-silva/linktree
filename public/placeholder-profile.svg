@@ -1,0 +1,7 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="180" fill="#E8E4DC"/>
+  <circle cx="90" cy="70" r="25" fill="#C4B5FD"/>
+  <path d="M40 140C40 120 60 105 90 105C120 105 140 120 140 140" stroke="#C4B5FD" stroke-width="8" stroke-linecap="round"/>
+  <text x="90" y="160" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">Your Photo</text>
+</svg>
+
