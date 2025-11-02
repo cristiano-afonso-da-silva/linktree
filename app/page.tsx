@@ -100,6 +100,11 @@ export default function Home() {
           {CONTENT.featuredProject.ctaText}
         </a>
       </div>
+
+      {/* Footer */}
+      <footer className="footer">
+        <p>Created by Cristiano. All rights reserved 2025</p>
+      </footer>
     </main>
   );
 }
