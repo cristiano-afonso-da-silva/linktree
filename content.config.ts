@@ -1,53 +1,80 @@
 /**
  * CONTENT CONFIGURATION FILE
  * 
- * Edit this file to update all the content on your portfolio page.
- * Replace the placeholder images with your own images in the /public folder.
+ * 🎯 THIS IS THE ONLY FILE YOU NEED TO EDIT!
+ * 
+ * Quick Start:
+ * 1. Add your images to /public folder
+ * 2. Update the values below
+ * 3. Save and see changes instantly!
  */
 
 export const CONTENT = {
   // Profile Section
   profile: {
-    // Replace with your profile image path (e.g., "/profile.png")
+    // Profile photo path (place image in /public folder, path must start with "/")
     image: "/profile.png",
+    
+    // Your name
     name: "Cristiano Afonso da Silva",
+    
+    // Your bio (words "design", "code", "focused", "consistent" will be underlined)
     bio: "I design and code tools that help people stay focused and consistent.",
   },
 
   // Social Media Links
+  // To remove a link: Delete the entire { name: "...", url: "...", icon: "..." } block
+  // To add a link: Copy a block and paste it below, update the values
   socialLinks: [
     {
       name: "Instagram",
-      url: "https://www.instagram.com/cristiano_a.silva",
-      // Replace with your Instagram icon (e.g., "/icons/instagram.svg")
+      url: "https://www.instagram.com/cristiano_a.silva", // Your Instagram URL
       icon: "/icons/instagram.svg",
     },
     {
       name: "Threads",
-      url: "https://threads.net/cristiano_a.silva",
-      // Replace with your Threads icon (e.g., "/icons/threads.svg")
+      url: "https://threads.net/cristiano_a.silva", // Your Threads URL
       icon: "/icons/threads.svg",
     },
     {
       name: "GitHub",
-      url: "https://github.com/cristiano-afonso-da-silva",
-      // Replace with your GitHub icon (e.g., "/icons/github.svg")
+      url: "https://github.com/cristiano-afonso-da-silva", // Your GitHub URL
       icon: "/icons/github.svg",
     },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/cristianoafonsodasilva/", // Your LinkedIn URL
+      icon: "/icons/linkedin.svg",
+    },
+    // To add more links, copy the format above and update name, url, and icon
   ],
 
-  // Featured Project Card
+  // Featured Project
   featuredProject: {
+    // Project title
     title: "DOIT — Coming 2026",
-    // Replace with your project image (e.g., "/project-image.png")
+    
+    // Project image path (place in /public folder, path must start with "/")
     image: "/project-image.png",
+    
+    // Number of spots left (set to 0 to hide)
     spotsLeft: 53,
+    
+    // Button text
     ctaText: "Join Doit now ->",
+    
+    // Button link (must include https://)
     ctaUrl: "https://doit-website.vercel.app/",
   },
 
-  // Background
-  // Replace with your background image path (e.g., "/background.jpg")
+  // Background image path (place in /public folder, path must start with "/")
   backgroundImage: "/background.png",
 };
 
+/**
+ * Tips:
+ * - All image paths must start with "/"
+ * - All URLs must include "https://"
+ * - Place all images in /public folder
+ * - Icons should be SVG files with transparent backgrounds
+ */
