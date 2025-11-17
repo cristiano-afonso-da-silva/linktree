@@ -73,7 +73,7 @@ export const CONTENT = {
     title: "DOIT — Coming 2026",
     
     // Project image path (place in /public folder, path must start with "/")
-    image: "/project-image.png",
+    image: "/doit-image.png",
     
     // Number of spots left (set to 0 to hide)
     spotsLeft: 53,
@@ -83,6 +83,24 @@ export const CONTENT = {
     
     // Button link (must include https://)
     ctaUrl: "https://doit-website.vercel.app/",
+  },
+
+  // Featured Project 2
+  featuredProject2: {
+    // Project title
+    title: "PostMyNote.app (Live)",
+    
+    // Project image path (place in /public folder, path must start with "/")
+    image: "/postmynote-image.png",
+    
+    // Number of spots left (set to 0 to hide)
+    spotsLeft: 0,
+    
+    // Button text
+    ctaText: "Navigate to PostMyNote.app ->",
+    
+    // Button link (must include https://)
+    ctaUrl: "https://postmynote.app/",
   },
 
   // Background image path (place in /public folder, path must start with "/")

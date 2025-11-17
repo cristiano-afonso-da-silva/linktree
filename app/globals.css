@@ -28,7 +28,7 @@ body {
 
 body {
   min-height: 100%;
-  background-color: #e8e4dc;
+  background-color: #f1f2f3;
   color: #1a1a1a;
 }
 
@@ -52,13 +52,17 @@ body {
   justify-content: flex-start;
   min-height: 100vh;
   padding: 40px 24px 32px;
-  max-width: 480px;
+  width: 100%;
+  max-width: 800px;
+  min-width: 320px;
   margin: 0 auto;
   position: relative;
-  background-size: auto;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+}
+
+@media (min-width: 1200px) {
+  .portfolio-container {
+    width: 40%;
+  }
 }
 
 /* Profile Section */
@@ -145,7 +149,6 @@ body {
   text-decoration: none;
   color: #1a1a1a;
   margin-bottom: 24px;
-  max-width: 420px;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -180,7 +183,6 @@ body {
   text-decoration: none;
   color: #1a1a1a;
   margin-bottom: 24px;
-  max-width: 420px;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -209,8 +211,8 @@ body {
   border-radius: 24px;
   padding: 24px;
   width: 100%;
-  max-width: 420px;
   flex-shrink: 0;
+  margin-bottom: 24px;
   animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.05s both;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -278,12 +280,29 @@ body {
 }
 
 .cta-button:hover {
-  background: #b4a5ed;
   transform: translateY(-3px) scale(1.02);
 }
 
 .cta-button:active {
   transform: translateY(-1px) scale(1);
+}
+
+/* PostMyNote Button */
+.cta-button-postmynote {
+  background: rgba(255, 189, 89, 0.6);
+}
+
+.cta-button-postmynote:hover {
+  background: rgba(255, 167, 38, 0.6);
+}
+
+/* DOIT Button */
+.cta-button-doit {
+  background: rgba(119, 119, 255, 0.6);
+}
+
+.cta-button-doit:hover {
+  background: rgba(102, 102, 238, 0.6);
 }
 
 /* Footer */
@@ -302,6 +321,21 @@ body {
 }
 
 /* Responsive adjustments */
+@media (max-width: 1024px) {
+  .portfolio-container {
+    width: 90%;
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 40px 20px 32px;
+  }
+}
+
 @media (max-height: 800px) {
   .portfolio-container {
     padding: 24px 20px 20px;
@@ -405,6 +439,70 @@ body {
 
   .project-card {
     padding: 16px;
+  }
+}
+
+/* Onboarding Animation */
+.onboarding-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f1f2f3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  animation: fadeOut 0.5s ease-out 2.5s forwards;
+}
+
+.onboarding-text {
+  font-family: var(--font-eb-garamond), "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 64px;
+  color: #1a1a1a;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+  color: #1a1a1a;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .onboarding-text {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .onboarding-text {
+    font-size: 36px;
   }
 }
 

@@ -1,14 +1,19 @@
+'use client';
+
+import { useState } from "react";
 import { CONTENT } from "@/content.config";
 import Image from "next/image";
+import Onboarding from "./components/Onboarding";
 
 export default function Home() {
+  const [showOnboarding, setShowOnboarding] = useState(true);
+
+  if (showOnboarding) {
+    return <Onboarding onComplete={() => setShowOnboarding(false)} />;
+  }
+
   return (
-    <main 
-      className="portfolio-container"
-      style={{
-        backgroundImage: `url('${CONTENT.backgroundImage}')`,
-      }}
-    >
+    <main className="portfolio-container">
       {/* Profile Section */}
       <div className="profile-section">
         <Image
@@ -92,6 +97,37 @@ export default function Home() {
         {CONTENT.resumeTemplate.text}
       </a>
 
+      {/* Featured Project 2 Card */}
+      <div className="project-card">
+        <h2 className="project-title">{CONTENT.featuredProject2.title}</h2>
+        
+        <div className="project-image-wrapper">
+          <Image
+            src={CONTENT.featuredProject2.image}
+            alt={CONTENT.featuredProject2.title}
+            width={600}
+            height={400}
+            className="project-image"
+          />
+        </div>
+        
+        {CONTENT.featuredProject2.spotsLeft > 0 && (
+          <p className="project-info">
+            Only <strong>{CONTENT.featuredProject2.spotsLeft}</strong> spots left for{" "}
+            <span className="underline">FREE early access</span>
+          </p>
+        )}
+        
+        <a
+          href={CONTENT.featuredProject2.ctaUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cta-button cta-button-postmynote"
+        >
+          {CONTENT.featuredProject2.ctaText}
+        </a>
+      </div>
+
       {/* Featured Project Card */}
       <div className="project-card">
         <h2 className="project-title">{CONTENT.featuredProject.title}</h2>
@@ -115,7 +151,7 @@ export default function Home() {
           href={CONTENT.featuredProject.ctaUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="cta-button"
+          className="cta-button cta-button-doit"
         >
           {CONTENT.featuredProject.ctaText}
         </a>
